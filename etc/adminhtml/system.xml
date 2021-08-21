@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="customer" translate="label" sortOrder="300">
+            <label>Customers</label>
+        </tab>
+        <section id="first_section" translate="label" sortOrder="100" showInWebsite="1" showInStore="1" showInDefault="1">
+            <label>Enable Feedback</label>
+            <tab>customer</tab>
+            <resource>Baskar_Feedback::parent</resource>
+            <group id="feedback_group" showInWebsite="1" showInStore="1" showInDefault="1" translate="label" >
+                <label>Feedback</label>
+                <field id="option" showInWebsite="1" showInStore="1" showInDefault="1" translate="label" type="select" sortOrder="100" >
+                    <label>Enable Feedback </label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,28 @@
+<form action="\feedback\formpage\feedbacksave" method="post"
+      class="form" style="width:500px;margin-left: 300px " id="custom-form">
+    <fieldset class="fieldset">
+        <legend class="legend">Feedback Form</legend>
+        <div class="field name required">
+            <label class="label" for="firstName"><span>First Name</span></label>
+            <input data-validate='{"required":true}' name="firstname"  id="firstName" type="text" value="<?php echo $block->getUserFirstName(); ?>">
+        </div>
+        <div class="field name required">
+            <label class="label"><span>Last Name</span></label>
+            <input data-validate='{"required":true}' name="lastname" type="text" value="<?php echo $block->getUserLastName(); ?>">
+        </div>
+        <div class="field name required">
+            <label class="label"><span>Email</span></label>
+            <input data-validate='{"required":true}' name="useremail" type="email" value="<?php echo $block->getUserEmail(); ?>">
+        </div>
+        <div class="field name required">
+            <label class="label"><span>Feedback</span></label>
+            <textarea data-validate='{"required":true}' name="feedback" type="text" ></textarea>
+        </div>
+    </fieldset>
+
+
+    <button type="submit" >Submit</button>
+
+
+</form>
+

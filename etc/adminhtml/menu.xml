@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Baskar_Feedback::feedback" title="Customer Feedback" translate="title" module="Baskar_Feedback" sortOrder="10" parent="Magento_Customer::customer" action="feedback/feedback/index" resource="Baskar_Feedback::feedback"/>
+    </menu>
+</config>

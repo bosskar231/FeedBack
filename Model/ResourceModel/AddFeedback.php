@@ -1,0 +1,19 @@
+<?php
+
+
+namespace Baskar\Feedback\Model\ResourceModel;
+
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+
+class AddFeedback extends AbstractDb
+{
+
+ 
+    protected function _construct()
+    {
+
+        $this->_init('customers_feedback', 'customer_id');
+    }
+
+}

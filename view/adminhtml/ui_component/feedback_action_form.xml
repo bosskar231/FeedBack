@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">feedback_action_form.feedback_action_listing_data_source</item>
+            <item name="deps" xsi:type="string">feedback_action_form.feedback_action_listing_data_source</item>
+            <item name="layout" xsi:type="array">
+                <item name="type" xsi:type="string">tabs</item>
+            </item>
+        </item>
+        <item name="label" xsi:type="string" translate="true" >Customer Feedback</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">feedback_action_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="spinner" xsi:type="string">customer_id</item>
+        <item name="buttons" xsi:type="array">
+            <item name="backButton" xsi:type="string">Baskar\Feedback\Block\Adminhtml\Edit\BackButton</item>
+            <item name="Accept" xsi:type="string">Baskar\Feedback\Block\Adminhtml\Edit\AcceptButton</item>
+            <item name="Decline" xsi:type="string">Baskar\Feedback\Block\Adminhtml\Edit\DeclineButton</item>
+
+        </item>
+    </argument>
+
+    <dataSource name="feedback_action_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Baskar\Feedback\Model\Ui\DataProvider</argument>
+            <argument name="name" xsi:type="string">feedback_action_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">customer_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">customer_id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+
+    <fieldset name="feedback_action_form">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true" >Feedback Form</item>
+            </item>
+        </argument>
+
+        <field name="first_name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">First Name</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">member</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">first_name</item>
+
+                </item>
+            </argument>
+        </field>
+        <field name="last_name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Last Name</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">member</item>
+                    <item name="dataScope" xsi:type="string">last_name</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+        </field>
+        <field name="user_email">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Email</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">member</item>
+                    <item name="dataScope" xsi:type="string">user_email</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+        </field>
+        <field name="feedback">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Feedback</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">member</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">feedback</item>
+                </item>
+            </argument>
+        </field>
+        <field name="status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">status</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">member</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">status</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
+
+
+
+
+
